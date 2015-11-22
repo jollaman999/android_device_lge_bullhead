@@ -129,7 +129,7 @@ TARGET_COPY_OUT_VENDOR := system
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.bullhead
 
-TARGET_RECOVERY_FSTAB = device/lge/bullhead/fstab.bullhead
+#TARGET_RECOVERY_FSTAB = device/lge/bullhead/fstab.bullhead
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/bullhead
 
@@ -156,5 +156,18 @@ TARGET_PER_MGR_ENABLED := true
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
+
+#TWRP config
+BOARD_HAS_NO_SELECT_BUTTON := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+
+TW_THEME := portrait_hdpi
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+#TW_SCREEN_BLANK_ON_BOOT := true
 
 -include vendor/lge/bullhead/BoardConfigVendor.mk
