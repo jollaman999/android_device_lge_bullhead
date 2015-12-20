@@ -388,6 +388,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.camera.notify_nfc=1
 
+# Volume Steps
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.config.vc_call_vol_steps=10 \
+	ro.config.media_vol_steps=40
+
 # Power HAL
 PRODUCT_PACKAGES += \
     power.bullhead
