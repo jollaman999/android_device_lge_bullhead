@@ -393,6 +393,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.vc_call_vol_steps=10 \
 	ro.config.media_vol_steps=40
 
+# jolla-kernel
+PRODUCT_PACKAGES += \
+	A2DPChecker \
+	USB-Keyboard
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/app/USB-Keyboard/lib/arm/libapplication.so:/system/app/USB-Keyboard/lib/arm/libapplication.so \
+	$(LOCAL_PATH)/app/USB-Keyboard/lib/arm/libsdl-1.2.so:/system/app/USB-Keyboard/lib/arm/libsdl-1.2.so \
+	$(LOCAL_PATH)/app/USB-Keyboard/lib/arm/libsdl_image.so:/system/app/USB-Keyboard/lib/arm/libsdl_image.so \
+	$(LOCAL_PATH)/app/USB-Keyboard/lib/arm/libsdl_main.so:/system/app/USB-Keyboard/lib/arm/libsdl_main.so \
+	$(LOCAL_PATH)/app/USB-Keyboard/lib/arm/libsdl_native_helpers.so:/system/app/USB-Keyboard/lib/arm/libsdl_native_helpers.so \
+	$(LOCAL_PATH)/app/USB-Keyboard/lib/arm/libsdl_ttf.so:/system/app/USB-Keyboard/lib/arm/libsdl_ttf.so \
+	$(LOCAL_PATH)/app/USB-Keyboard/lib/arm/libvncserver.so:/system/app/USB-Keyboard/lib/arm/libvncserver.so
+
 # Power HAL
 PRODUCT_PACKAGES += \
     power.bullhead
