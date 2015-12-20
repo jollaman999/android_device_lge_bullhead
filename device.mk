@@ -396,9 +396,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # jolla-kernel
 PRODUCT_PACKAGES += \
 	A2DPChecker \
-	USB-Keyboard
+	USB-Keyboard \
+	jolla-kernel_Updater
 
 PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/jolla-kernel.prop:root/jolla-kernel.prop \
 	$(LOCAL_PATH)/app/USB-Keyboard/lib/arm/libapplication.so:/system/app/USB-Keyboard/lib/arm/libapplication.so \
 	$(LOCAL_PATH)/app/USB-Keyboard/lib/arm/libsdl-1.2.so:/system/app/USB-Keyboard/lib/arm/libsdl-1.2.so \
 	$(LOCAL_PATH)/app/USB-Keyboard/lib/arm/libsdl_image.so:/system/app/USB-Keyboard/lib/arm/libsdl_image.so \
