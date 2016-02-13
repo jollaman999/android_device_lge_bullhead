@@ -55,7 +55,14 @@ void mrom_hook_fixup_bootimg_cmdline(char *bootimg_cmdline, size_t bootimg_cmdli
 
 int mrom_hook_has_kexec(void)
 {
-    return -1;
+    // check for fdt blob
+    static const char *checkfile = "/sys/firmware/fdt";
+    if(access(checkfile, R_OK) < 0)
+    {
+        ERROR("%s was not found!\n", checkfile);
+        return 0;
+    }
+    return 1;
 }
 #endif
 
