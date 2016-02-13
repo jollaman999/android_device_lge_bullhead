@@ -177,4 +177,20 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/twrp.fstab:recovery/root/etc/twrp.fstab
 
+# MultiROM
+TARGET_RECOVERY_IS_MULTIROM := true
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := device/lge/bullhead/multirom/mr_init_devices.c
+MR_DPI := hdpi
+MR_DPI_FONT := 220
+MR_FSTAB := device/lge/bullhead/twrp.fstab
+MR_USE_MROM_FSTAB := false
+MR_KEXEC_MEM_MIN := 0x0
+MR_DEVICE_HOOKS := device/lge/bullhead/multirom/mr_hooks.c
+MR_DEVICE_HOOKS_VER := 6
+MR_PIXEL_FORMAT := "RGB_565"
+MR_ENCRYPTION := true
+MR_ENCRYPTION_SETUP_SCRIPT := device/lge/bullhead/multirom/mr_cp_crypto.sh
+MR_ENCRYPTION_FAKE_PROPERTIES := true
+
 -include vendor/lge/bullhead/BoardConfigVendor.mk
