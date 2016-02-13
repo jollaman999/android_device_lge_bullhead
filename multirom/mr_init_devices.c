@@ -58,6 +58,11 @@ const char *mr_init_devices[] =
     // USB Drive is in here
     "/devices/soc.0/f9200000.ssusb/f9200000.dwc3/xhci-hcd.0.auto/usb*",
 
+    // Encryption
+    "/sys/devices/virtual/misc/device-mapper",
+    "/sys/devices/virtual/misc/ion",
+    "/sys/devices/virtual/qseecom/qseecom",
+
     // exfat requires fuse device
     "/sys/devices/virtual/misc/fuse",
 

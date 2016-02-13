@@ -92,6 +92,7 @@ void tramp_hook_encryption_setup(void)
     symlink("/dev/block/platform/soc.0/f9824900.sdhci", "/dev/block/bootdevice");
     chmod("/dev/qseecom", 0660);
     chown("/dev/qseecom", AID_SYSTEM, AID_DRMRPC);
+    chown("/dev/ion", AID_SYSTEM, AID_SYSTEM);
     chmod("/mrom_enc/qseecomd", 0755);
     qseecomd_pid = fork_and_exec(cmd, env);
     if (qseecomd_pid == -1)

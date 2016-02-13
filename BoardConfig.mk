@@ -193,5 +193,8 @@ MR_PIXEL_FORMAT := "RGB_565"
 MR_ENCRYPTION := true
 MR_ENCRYPTION_SETUP_SCRIPT := device/lge/bullhead/multirom/mr_cp_crypto.sh
 MR_ENCRYPTION_FAKE_PROPERTIES := true
+MR_USE_QCOM_OVERLAY := true
+MR_QCOM_OVERLAY_HEADER := device/lge/bullhead/multirom/mr_qcom_overlay.h
+MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGB_565
 
 -include vendor/lge/bullhead/BoardConfigVendor.mk
