@@ -113,4 +113,8 @@ void tramp_hook_encryption_cleanup(void)
         remove("/dev/block/bootdevice");
     INFO("cleaned up after qseecomd\n");
 }
+
+void mrom_hook_fixup_full_cmdline(char *bootimg_cmdline, size_t bootimg_cmdline_cap)
+{
+}
 #endif
