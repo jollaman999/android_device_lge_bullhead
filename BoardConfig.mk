@@ -178,6 +178,7 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # MultiROM
+DEVICE_RESOLUTION := 1080x1920
 TARGET_RECOVERY_IS_MULTIROM := true
 MR_INPUT_TYPE := type_b
 MR_INIT_DEVICES := device/lge/bullhead/multirom/mr_init_devices.c
