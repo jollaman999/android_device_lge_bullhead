@@ -19,10 +19,20 @@
 
 #include <log.h>
 #include <util.h>
+#include <multirom.h>
+
+#define GATEKEEPERD_PATH "/system/bin/gatekeeperd"
 
 #if MR_DEVICE_HOOKS >= 1
 int mrom_hook_after_android_mounts(const char *busybox_path, const char *base_path, int type)
 {
+    if (type == ROM_DEFAULT)
+        return 0;
+
+    // Remove gatekeeperd from secondary ROM to prevent the corrupting with primary ROM's password
+    if (access(GATEKEEPERD_PATH, F_OK) == 0)
+        remove(GATEKEEPERD_PATH);
+
     return 0;
 }
 #endif /* MR_DEVICE_HOOKS >= 1 */
