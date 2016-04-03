@@ -22,7 +22,6 @@
 #include <util.h>
 #include <multirom.h>
 
-#define GATEKEEPERD_PATH "/system/bin/gatekeeperd"
 #define GATEKEEPER_DATA_DIR "/data/misc/gatekeeper"
 #define GATEKEEPER_COLDBOOT_PATH "/data/misc/gatekeeper/.coldboot"
 
@@ -56,10 +55,6 @@ int mrom_hook_after_android_mounts(const char *busybox_path, const char *base_pa
 
     if (type == ROM_DEFAULT)
         return 0;
-
-    // Remove gatekeeperd from secondary ROM to prevent the corrupting with primary ROM's password
-    if (access(GATEKEEPERD_PATH, F_OK) == 0)
-        remove(GATEKEEPERD_PATH);
 
     return 0;
 }
