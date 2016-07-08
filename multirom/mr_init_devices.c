@@ -49,8 +49,6 @@ const char *mr_init_devices[] =
     
     // for adb
     "/sys/class/tty/ptmx",
-    "/sys/devices/soc.0/f9824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p41", // system
-    "/sys/devices/soc.0/f9824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p40", // cache
     "/sys/class/misc/android_adb",
     "/sys/class/android_usb/android0/f_ffs",
     "/sys/bus/usb",
