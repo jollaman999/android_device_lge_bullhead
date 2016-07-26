@@ -396,6 +396,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.camera.notify_nfc=1
 
+# Enable sdcardfs support
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sdcardfs.enable=true
+
 # jolla-kernel
 PRODUCT_COPY_FILES += \
 	device/lge/bullhead/jolla-kernel.prop:root/jolla-kernel.prop \
