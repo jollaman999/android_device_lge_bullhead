@@ -157,10 +157,6 @@ NXP_CHIP_TYPE := 2
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
-USE_CLANG_PLATFORM_BUILD := true
-
-USE_CLANG_PLATFORM_BUILD := true
-
 # CM Hardware
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
