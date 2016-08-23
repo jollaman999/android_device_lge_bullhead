@@ -17,15 +17,11 @@
 #
 # <src relative to root of extracted filesystem>:<dst relative to system>
 
-app/HiddenMenu/HiddenMenu.apk
-app/RCSBootstraputil/RCSBootstraputil.apk
-app/RcsImsBootstraputil/RcsImsBootstraputil.apk
-app/TimeService/TimeService.apk
-app/Tycho/Tycho.apk
-# app/atfwd/atfwd.apk
-# app/datastatusnotification/datastatusnotification.apk
-# app/ims/ims.apk
-# app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-app/datastatusnotification/datastatusnotification.apk
+-app/ims/ims.apk
+-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-app/TimeService/TimeService.apk
+-priv-app/CNEService/CNEService.apk
 bin/ATFWD-daemon
 bin/btnvtool
 bin/cnd
@@ -86,12 +82,15 @@ framework/rcsservice.jar
 lib/hw/camera.msm8992.so
 lib/hw/fingerprint.bullhead.so
 lib/hw/gps.msm8992.so
+lib/hw/lights.bullhead.so
 lib/hw/local_time.default.so
 lib/hw/nfc_nci.bullhead.so
 lib/lib_fpc_tac_shared.so
 lib/libdmengine.so
 lib/libdmjavaplugin.so
 lib/libgps.utils.so
+lib/libimscamera_jni.so
+lib/libimsmedia_jni.so
 lib/libloc_api_v02.so
 lib/libloc_core.so
 lib/libloc_ds_api.so
@@ -105,20 +104,10 @@ lib64/hw/gps.msm8992.so
 lib64/hw/nfc_nci.bullhead.so
 lib64/lib_fpc_tac_shared.so
 lib64/libgps.utils.so
+lib64/libimscamera_jni.so
+lib64/libimsmedia_jni.so
 lib64/libloc_api_v02.so
 lib64/libloc_core.so
 lib64/libloc_ds_api.so
 lib64/libloc_eng.so
-priv-app/CNEService/CNEService.apk
-priv-app/ConnMO/ConnMO.apk
-priv-app/DCMO/DCMO.apk
-priv-app/DMConfigUpdate/DMConfigUpdate.apk
-priv-app/DMService/DMService.apk
-priv-app/DMService/lib/arm/libdmengine.so
-priv-app/DMService/lib/arm/libdmjavaplugin.so
-priv-app/DiagMon/DiagMon.apk
-priv-app/GCS/GCS.apk
-priv-app/HotwordEnrollment/HotwordEnrollment.apk
-priv-app/LifeTimerService/LifeTimerService.apk
-priv-app/SprintDM/SprintDM.apk
 
