@@ -11,6 +11,7 @@ cp /vendor/lib64/libQSEEComAPI.so /sbin/libQSEEComAPI.so
 cp /vendor/lib64/hw/keystore.msm8992.so /sbin/keystore.msm8992.so
 cp /vendor/lib64/libdrmfs.so /sbin/libdrmfs.so
 cp /vendor/lib64/libdrmtime.so /sbin/libdrmtime.so
+cp /vendor/lib64/libtime_genoff.so /sbin/libtime_genoff.so
 cp /vendor/lib64/librpmb.so /sbin/librpmb.so
 cp /vendor/lib64/libssd.so /sbin/libssd.so
 cp /vendor/lib64/libdiag.so /sbin/libdiag.so
