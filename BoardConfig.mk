@@ -193,6 +193,7 @@ MR_KEXEC_MEM_MIN := 0x0
 MR_DEVICE_HOOKS := device/lge/bullhead/multirom/mr_hooks.c
 MR_DEVICE_HOOKS_VER := 6
 MR_PIXEL_FORMAT := "ABGR_8888"
+MR_DEFAULT_BRIGHTNESS := 149
 MR_ENCRYPTION := true
 MR_ENCRYPTION_SETUP_SCRIPT := device/lge/bullhead/multirom/mr_cp_crypto.sh
 MR_ENCRYPTION_FAKE_PROPERTIES := true
