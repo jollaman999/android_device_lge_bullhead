@@ -166,6 +166,9 @@ TARGET_PER_MGR_ENABLED := true
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
 
+# recovery - Use lzma for recovery to reduce ramdisk size
+LZMA_RAMDISK_TARGETS := recovery
+
 # TWRP
 TW_THEME := portrait_hdpi
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
