@@ -1,6 +1,8 @@
 [
   {
-    "repository": "android_kernel_lge_bullhead",
-    "target_path": "kernel/lge/bullhead"
+    "remote": "github",
+    "repository": "jollaman999/jolla-kernel_bullhead",
+    "target_path": "kernel/lge/bullhead",
+    "revision": "android-7.1.1"
   }
 ]
