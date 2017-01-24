@@ -39,6 +39,8 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bullhead 
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 msm_poweroff.download_mode=0
 
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
+# Used for build MultiROM recovery
+BOARD_MKBOOTIMG_ARGS += --board mrom$(shell date -u +%Y%m%d)-00
 
 BOARD_NEEDS_VENDORIMAGE_SYMLINK := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
