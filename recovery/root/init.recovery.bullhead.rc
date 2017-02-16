@@ -62,7 +62,7 @@ on boot
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay 19000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 85
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 19000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1248000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 960000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 1
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "50 600000:65 787200:75 960000:80"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
@@ -82,7 +82,7 @@ on boot
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 19000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 1248000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "70 960000:80 1248000:85"
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "50 768000:70 960000:80 1248000:85"
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis 80000
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 633600
@@ -96,9 +96,6 @@ on boot
     # Restore CPU 4 max freq from msm_performance
     write /sys/module/msm_performance/parameters/cpu_max_freq "4:4294967295 5:4294967295"
 
-    # input boost configuration
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:960000 4:768000"
-
     # enable rps static configuration
     write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus 8
 
@@ -108,6 +105,10 @@ on boot
     # set GPU default power level to 5 (180MHz) instead of 4 (305MHz)
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 5
     #####################################################################
+
+    write /sys/block/mmcblk0/queue/rq_affinity 0
+    write /sys/block/mmcblk0/queue/scheduler bfq
+    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
 
 on property:ro.crypto.state=encrypted
     start sbinqseecomd
