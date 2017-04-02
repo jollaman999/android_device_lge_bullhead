@@ -21,6 +21,7 @@ on fs
     chmod 0664 /dev/ion
     chown system system /dev/ion
     start pulldecryptfiles
+    install_keyring
 
 on boot
     ###################### jolla-kernel Settings ########################
