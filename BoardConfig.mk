@@ -191,6 +191,7 @@ DEVICE_RESOLUTION := 1080x1920
 TARGET_RECOVERY_IS_MULTIROM := true
 MR_INPUT_TYPE := type_b
 MR_INIT_DEVICES := device/lge/bullhead/multirom/mr_init_devices.c
+MR_DEVICE_BOOTDEVICE := /dev/block/platform/soc.0/f9824900.sdhci
 MR_DPI := hdpi
 MR_DPI_FONT := 220
 MR_FSTAB := device/lge/bullhead/twrp.fstab
